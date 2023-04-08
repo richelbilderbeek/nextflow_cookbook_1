@@ -1,0 +1,117 @@
+\documentclass{book}
+
+% Just to have them already
+% \begin{sloppypar}
+% \end{sloppypar}
+
+% Just try to parse, do not ask for input
+\nonstopmode
+
+% Bibliography
+% For Vancounter style:
+\usepackage[numbers]{natbib}
+% For regular style:
+% \usepackage{natbib}
+
+
+%\bibpunct{(}{)}{;}{a}{}{;}
+
+% Use 'It was found that A is B (Name 1234)' style
+%\setcitestyle{authoryear,open={},close={}}
+
+% Affiliations
+\title{
+  Nextflow Cookbook 1: Basics \\
+  \includegraphics[width=0.8\textwidth]{title_graph.png}
+}
+\author{Richèl J.C. Bilderbeek}
+
+
+% Use double spacing
+%\usepackage{setspace}
+%\doublespacing
+
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{todonotes}
+\usepackage{verbatim}
+\usepackage{pgf}
+\usepackage{bm}
+\usepackage{multirow}
+\usepackage{amsfonts}
+\usepackage{array}
+\usepackage{booktabs}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage{longtable}
+
+% TikZ
+\usepackage{tikz}
+\usepackage{tkz-graph}
+\usetikzlibrary{arrows,automata}
+
+% sidewaysfigure
+\usepackage{rotating}
+
+% Style of listings
+% From http://r.789695.n4.nabble.com/
+%   How-to-nicely-display-R-code-with-the-LaTeX-package-listings-tp4648110.html
+\usepackage{fancyvrb} 
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolor}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+  language={C++},% set programming language
+  basicstyle=\ttfamily\small,% basic font style
+  frame=single,
+  commentstyle=\color{gray},% comment style
+  numberstyle=\scriptsize,% use small line numbers
+  numbersep=10pt,% space between line numbers and code
+  tabsize=2,% sizes of tabs
+  showstringspaces=false,
+  captionpos=b,% positioning of the caption below
+  breaklines=true,% automatic line breaking
+%  escapeinside={(*}{*)},% escaping to LaTeX, don't: just keep those listings verbatim
+  fancyvrb=true,% verbatim code is typset by listings
+  extendedchars=false,% prohibit extended chars (chars of codes 128--255)
+  deletekeywords={c}% remove keywords 
+}
+\lstset{style=mystyle}
+
+% Subfigures
+\usepackage{subcaption}
+
+% Index
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{imakeidx}
+\makeindex
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\include{nextflow_cookbook_1_chapter_1}
+\include{nextflow_cookbook_1_chapter_2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Vancouver style
+\bibliographystyle{unsrtnat}
+% MEE style
+%\bibliographystyle{mee}
+\bibliography{nextflow_cookbook_1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\appendix
+
+% \include{boost_graph_cookbook_1_chapter_13}
+
+\printindex
+
+\end{document}

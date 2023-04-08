@@ -1,6 +1,6 @@
-# nextflow_notes
+# Nextflow Cookbook 1
 
-My notes about Nextflow.
+Nextflow cookbook.
 
 ## Goals
 
