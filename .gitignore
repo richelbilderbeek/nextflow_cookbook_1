@@ -11,3 +11,4 @@ work/
 *.ind
 *.out
 *.pdf
+temp_lint/
