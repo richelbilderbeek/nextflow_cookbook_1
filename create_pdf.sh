@@ -15,3 +15,4 @@ pdflatex nextflow_cookbook_1.tex
 bibtex nextflow_cookbook_1 >/dev/null
 pdflatex nextflow_cookbook_1.tex >/dev/null
 pdflatex nextflow_cookbook_1.tex
+
