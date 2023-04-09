@@ -38,6 +38,9 @@ cp -f $filename $temp_lint_foldername/main.nf
 echo "Change to the linter working directory '$temp_lint_foldername'"
 cd $temp_lint_foldername
 
+echo "Modify 'nextflow_schema.json' to not hava 'fasta' as an input argument"
+sed -i '57,65d' nextflow_schema.json
+
 echo "Run nf-core lint"
 nf-core lint
 
